@@ -182,7 +182,7 @@ function generateFileName(originalName: string, userId?: string): string {
 class FileUploader {
   private getUploadEndpoint(): string {
     const config = useRuntimeConfig()
-    return config.public.uploadEndpoint || 'http://47.112.3.6/upload'
+    return config.public.uploadEndpoint || '/api/upload'
   }
 
   // 上传文件

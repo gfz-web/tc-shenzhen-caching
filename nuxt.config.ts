@@ -55,13 +55,18 @@ export default defineNuxtConfig({
     supabaseUrl: 'https://zeqpgwdworgybkfjgxwk.supabase.co',
     supabaseAnonKey: 'sb_secret_jq79sSAaBb1rZU88VtRlHA_MBYR7gSz',
 
+    /** 仅服务端：真实 ECS 上传接口（可设环境变量 NUXT_UPLOAD_UPSTREAM） */
+    uploadUpstream: 'http://47.112.3.6/upload',
+    /** 仅服务端：ECS 上静态图根 URL，用于代理读图与回写同源地址 */
+    uploadFilesBase: 'http://47.112.3.6/uploads',
+
     // 公共配置 (客户端和服务端都可访问)
     public: {
       supabaseUrl: 'https://zeqpgwdworgybkfjgxwk.supabase.co',
       supabaseAnonKey: 'sb_secret_jq79sSAaBb1rZU88VtRlHA_MBYR7gSz',
 
-      // 文件上传配置（ECS 公网 IP + Nginx /upload）
-      uploadEndpoint: 'http://47.112.3.6/upload',
+      // 浏览器走同源 /api/upload，避免 HTTPS 页面请求 http://IP 混合内容；由服务端转发到 uploadUpstream
+      uploadEndpoint: '/api/upload',
     },
   },
 
