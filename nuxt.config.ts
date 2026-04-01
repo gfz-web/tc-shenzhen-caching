@@ -60,8 +60,8 @@ export default defineNuxtConfig({
       supabaseUrl: 'https://zeqpgwdworgybkfjgxwk.supabase.co',
       supabaseAnonKey: 'sb_secret_jq79sSAaBb1rZU88VtRlHA_MBYR7gSz',
 
-      // 文件上传配置
-      uploadEndpoint: 'https://fc-mp-729b36f8-00b6-4256-a4f1-18f567945edd.next.bspapp.com/upload',
+      // 文件上传配置（ECS 公网 IP + Nginx /upload）
+      uploadEndpoint: 'http://47.112.3.6/upload',
     },
   },
 
