@@ -1,13 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
-// 密钥勿入库：.env 中配置 NUXT_SUPABASE_*（服务端）或 NUXT_PUBLIC_SUPABASE_*（与 nuxt runtimeConfig 一致）
-const supabaseUrl =
-  process.env.NUXT_SUPABASE_URL || process.env.NUXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || ''
-const supabaseAnonKey =
-  process.env.NUXT_SUPABASE_ANON_KEY
-  || process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY
-  || process.env.SUPABASE_ANON_KEY
-  || ''
+// 直接使用配置值避免构建时的问题
+const supabaseUrl = 'https://zeqpgwdworgybkfjgxwk.supabase.co'
+const supabaseAnonKey = 'sb_secret_jq79sSAaBb1rZU88VtRlHA_MBYR7gSz'
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 

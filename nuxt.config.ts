@@ -51,14 +51,14 @@ export default defineNuxtConfig({
 
   // 运行时配置
   runtimeConfig: {
-    // 服务端配置（本地用 .env：NUXT_SUPABASE_URL / NUXT_SUPABASE_ANON_KEY）
-    supabaseUrl: '',
-    supabaseAnonKey: '',
+    // 服务端配置
+    supabaseUrl: 'https://zeqpgwdworgybkfjgxwk.supabase.co',
+    supabaseAnonKey: 'sb_secret_jq79sSAaBb1rZU88VtRlHA_MBYR7gSz',
 
-    // 公共配置（.env：NUXT_PUBLIC_SUPABASE_URL / NUXT_PUBLIC_SUPABASE_ANON_KEY）
+    // 公共配置 (客户端和服务端都可访问)
     public: {
-      supabaseUrl: '',
-      supabaseAnonKey: '',
+      supabaseUrl: 'https://zeqpgwdworgybkfjgxwk.supabase.co',
+      supabaseAnonKey: 'sb_secret_jq79sSAaBb1rZU88VtRlHA_MBYR7gSz',
 
       // 文件上传配置
       uploadEndpoint: 'https://fc-mp-729b36f8-00b6-4256-a4f1-18f567945edd.next.bspapp.com/upload',

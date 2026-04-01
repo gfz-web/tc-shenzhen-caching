@@ -4,4 +4,5 @@ command = "pnpm run build"
 
 [build.environment]
 NODE_VERSION = "20"
-# Supabase: set NUXT_SUPABASE_URL + NUXT_SUPABASE_ANON_KEY (and/or NUXT_PUBLIC_*) in Netlify → Environment variables.
+NUXT_SUPABASE_URL = "https://zeqpgwdworgybkfjgxwk.supabase.co"
+NUXT_SUPABASE_ANON_KEY = "sb_secret_jq79sSAaBb1rZU88VtRlHA_MBYR7gSz"
