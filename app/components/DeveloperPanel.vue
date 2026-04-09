@@ -35,6 +35,8 @@ const { success, error } = useToast()
 // 加载POI数据管理功能
 const { addPOI, updatePOI } = usePOIData()
 
+const { userInfo } = useUserInfo()
+
 // POI生成器
 const {
   newPOI,
@@ -234,6 +236,7 @@ async function processImageFile(file: File) {
       onProgress: (progress) => {
         referencePhotoProgress.value = progress.percent
       },
+      userId: userInfo.value?.employeeId || 'anonymous',
     })
 
     // 更新POI数据中的参考照片URL

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { POIData } from '~/types/amap'
 import { computed, reactive, ref, watch } from 'vue'
+import { useActivityCountdown } from '~/composables/useActivityCountdown'
 import { useToast } from '~/composables/useToast'
 import { useUserInfo } from '~/composables/useUserInfo'
 import { getEasterEggDisplayInfo } from '~/utils/scoreCalculation'
-import { useActivityCountdown } from '~/composables/useActivityCountdown'
 
 interface CheckinData {
   employeeId: string
@@ -211,6 +211,7 @@ async function onPhotoChange(event: Event) {
           }
         }
       },
+      userId: userInfo.value?.employeeId || 'anonymous',
     })
 
     // 确保压缩信息已设置（如果回调中没有设置）
