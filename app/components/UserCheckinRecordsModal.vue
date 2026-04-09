@@ -72,7 +72,7 @@ async function fetchUserCheckinRecords() {
         poiName: record.poi_name,
         comment: record.comment || '',
         rating: record.rating || 0,
-        photo: fixPhotoUrl(record.photo_url),
+        photo: record.photo_url,
         timestamp: new Date(record.created_at).getTime(),
         coordinates: {
           lat: record.latitude,

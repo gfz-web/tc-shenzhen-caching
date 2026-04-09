@@ -114,7 +114,7 @@ export default defineEventHandler(async (event) => {
     // 处理图片URL
     const processedData = (data || []).map(record => ({
       ...record,
-      photo_url: processImageUrl(record.photo_url),
+      photo_url: record.photo_url,
     }))
 
     return {
