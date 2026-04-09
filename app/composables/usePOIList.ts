@@ -141,6 +141,33 @@ export function usePOIList(pois: Ref<POIData[]>, _mapCenter: [number, number] = 
     }
   }
 
+  // 导出当前筛选后的 POI 列表为 Excel（列：name、distance、distanceScore、rating、totalScore）
+  async function exportPOIs() {
+    if (import.meta.server)
+      return
+
+    try {
+      const XLSX = await import('xlsx')
+      const header = ['地名', '距离（km）', '距离分', '难度分', '总分', '类型']
+      const rows: (string | number)[][] = filteredPOIs.value.map(poi => [
+        poi.name,
+        poi.distance ?? '',
+        poi.distanceScore ?? '',
+        poi.rating ?? '',
+        poi.totalScore ?? '',
+        poi.category ?? '',
+      ])
+      const sheet = XLSX.utils.aoa_to_sheet([header, ...rows])
+      const workbook = XLSX.utils.book_new()
+      XLSX.utils.book_append_sheet(workbook, sheet, 'POIs')
+      const date = new Date().toISOString().slice(0, 10)
+      XLSX.writeFile(workbook, `poi-list-${date}.xlsx`)
+    }
+    catch (e) {
+      console.error('导出 Excel 失败:', e)
+    }
+  }
+
   // 格式化距离显示
   function formatDistance(distance: number): string {
     if (distance < 1) {
@@ -187,6 +214,7 @@ export function usePOIList(pois: Ref<POIData[]>, _mapCenter: [number, number] = 
     setSorting,
     setCheckinStatus,
     clearFilters,
+    exportPOIs,
     calculateDistance,
     calculateDistanceScore,
     calculateTotalScore,

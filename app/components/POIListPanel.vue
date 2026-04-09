@@ -85,6 +85,7 @@ const {
   setCheckinStatus,
   clearFilters,
   formatDistance,
+  exportPOIs,
 } = usePOIList(toRef(props, 'pois'), undefined, props.isPOICheckedIn)
 
 // 同步外部筛选条件
@@ -228,6 +229,9 @@ function handlePOIClick(poi: POIData) {
           <button class="clear-filters-btn" @click="clearFilters">
             清除
           </button>
+          <!-- <button class="clear-filters-btn" @click="exportPOIs">
+            导出poi数据
+          </button> -->
         </div>
       </div>
 
