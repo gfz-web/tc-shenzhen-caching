@@ -18,14 +18,11 @@ const { userInfo } = useUserInfo()
 
 // 奖励配置
 const rewardConfig = [
-  { rank: [1, 5], reward: '冲锋衣', icon: '🧥' },
-  { rank: [6, 10], reward: '露营车', icon: '🚗' },
-  { rank: [11, 15], reward: '充电宝', icon: '🔋' },
-  { rank: [16, 30], reward: '折叠桌椅', icon: '🪑' },
-  { rank: [31, 45], reward: '登山杖', icon: '🥾' },
-  { rank: [46, 60], reward: '晴雨伞', icon: '☂️' },
-  { rank: [61, 75], reward: '充气沙发', icon: '🛋️' },
-  { rank: [76, Infinity], reward: '露营灯', icon: '💡' },
+  { rank: [1, 5], reward: '鸿星尔克冲锋衣', icon: '🧥' },
+  { rank: [6, 15], reward: 'jeep露营背包/李现同款太阳眼镜', icon: '🛋️' },
+  { rank: [16, 25], reward: '折叠户外桌椅组合/充电宝', icon: '🔋' },
+  { rank: [26, 33], reward: '骆驼登山杖伸缩款/jeep运动太阳帽+袖套', icon: '🥾' },
+  { rank: [33, Infinity], reward: '李宁运动毛巾', icon: '💡' },
 ]
 
 // 排行榜数据
