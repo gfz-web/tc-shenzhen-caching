@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import { calculateCheckinTotalScore, calculateCompanionBonus, calculateDistance, calculateDistanceScore, SHENZHEN_CENTER } from '../../../app/utils/scoreCalculation'
 
 // 活动结束时间（与前端保持一致）
-const ACTIVITY_END_TIME = new Date('2026-06-30T23:59:59+08:00').getTime() // 2026年6月30日23:59:59 (UTC+8)
+const ACTIVITY_END_TIME = new Date('2026-06-21T23:59:59+08:00').getTime() // 2026年6月21日23:59:59 (UTC+8)
 
 // 检查时间段是否激活
 function isTimeSlotActive(timeSlot: any, checkinTime: Date): boolean {
