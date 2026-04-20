@@ -20,8 +20,8 @@ const { userInfo } = useUserInfo()
 const rewardConfig = [
   { rank: [1, 5], reward: '鸿星尔克冲锋衣', icon: '🧥' },
   { rank: [6, 15], reward: 'jeep露营背包/李现同款太阳眼镜', icon: '🛋️' },
-  { rank: [16, 25], reward: '折叠户外桌椅组合/充电宝', icon: '🔋' },
-  { rank: [26, 33], reward: '骆驼登山杖伸缩款/jeep运动太阳帽+袖套', icon: '🥾' },
+  { rank: [16, 25], reward: '折叠户外桌椅组合/小米充电宝', icon: '🔋' },
+  { rank: [26, 33], reward: '户外登山杖/jeep运动太阳帽+袖套', icon: '🥾' },
   { rank: [33, Infinity], reward: '李宁运动毛巾', icon: '💡' },
 ]
 
