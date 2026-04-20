@@ -4,7 +4,7 @@
  */
 
 // 全局状态，确保整个应用共享同一个搜索范围状态
-const globalSearchRange = ref(800) // 默认800米
+const globalSearchRange = ref(3000) // 默认使用最大范围 3km
 const globalShowRangeControl = ref(false)
 const globalShowRangeCircle = ref(true)
 
