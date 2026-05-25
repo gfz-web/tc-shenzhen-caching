@@ -743,7 +743,7 @@ function _getSignalStrength(accuracy: number): number {
                   <strong>单人打卡不用填写</strong>
                 </div>
                 <div class="hint-item">
-                  💡 <strong>结伴加分规则：</strong>2人及以上每多1人加1分，最多5分
+                  💡 <strong>结伴加分规则：</strong>2人及以上同事每多1人加1分，最多5分，鼓励团队活动，可带家属但是家属不算同伴加分
                 </div>
                 <div class="hint-item">
                   📸 <strong>重要提醒：</strong>结伴人数需要在照片中体现，且只能是部门同事

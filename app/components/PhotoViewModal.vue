@@ -293,7 +293,7 @@ watch(() => props.isOpen, (isOpen) => {
             <div class="formula-details">
               <p>• <strong>点位基础分</strong>: 根据POI的难度等级评定 (1-5分)</p>
               <p>• <strong>距离加分</strong>: 根据距离深圳中心的远近给予额外分数 (0-5分)</p>
-              <p>• <strong>结伴加分</strong>: 2人及以上每多1人加1分，最多5分，鼓励团队活动</p>
+              <p>• <strong>结伴加分</strong>: 2人及以上同事每多1人加1分，最多5分，鼓励团队活动，可带家属但是家属不算同伴加分</p>
               <p>• <strong>彩蛋加分</strong>: 在特定时间段打卡可获得额外奖励分数</p>
             </div>
           </div>
